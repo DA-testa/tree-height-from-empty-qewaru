@@ -20,7 +20,7 @@ def main():
     check = input()
     if "F" in check:
         filename = input().strip()
-        with open("test/"+ filename) as f:
+        with open("test/" + filename) as f:
             n = int(f.readline())
             parents = list(map(int, f.readline().split()))
             print(compute_height(n, parents))
