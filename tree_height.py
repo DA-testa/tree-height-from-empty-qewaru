@@ -20,7 +20,7 @@ def main():
     check = input()
     if "F" in check:
         filename = input().strip()
-        with open('/workspaces/tree-height-from-empty-qewaru/test/' + filename) as f:
+        with open(filename) as f:
             n = int(f.readline())
             parents = list(map(int, f.readline().split()))
             print(compute_height(n, parents))
