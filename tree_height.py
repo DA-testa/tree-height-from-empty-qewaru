@@ -17,7 +17,7 @@ def compute_height(n, parents):
     return height(root)
 
 def main():
-    check = input("I or F: ")
+    check = input()
     if check == "I":
         n = int(input())
         parent = list(map(int, input().split()))
