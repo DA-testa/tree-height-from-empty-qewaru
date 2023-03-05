@@ -18,18 +18,17 @@ def compute_height(n, parents):
 
 def main():
     check = input()
-    if check == "I":
-        n = int(input())
-        parent = list(map(int, input().split()))
-        print(compute_height(n, parent))
-    
-    elif check == "F":
+    if "F" in check:
         filename = input("Enter input filename: ").strip()
         with open(filename, 'r') as f:
             n = int(f.readline())
             parents = list(map(int, f.readline().split()))
-            
             print(compute_height(n, parents))
+
+    elif "I" in check:
+        n = int(input())
+        parent = list(map(int, input().split()))
+        print(compute_height(n, parent))
 
 if __name__ == '__main__':
     sys.setrecursionlimit(10**7)
