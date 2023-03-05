@@ -30,7 +30,6 @@ def main():
         parent = list(map(int, input().split()))
         print(compute_height(n, parent))
 
-if __name__ == '__main__':
-    sys.setrecursionlimit(10**7)
-    threading.stack_size(2**27)
-    threading.Thread(target=main).start()
+sys.setrecursionlimit(10**7)
+threading.stack_size(2**27)
+threading.Thread(target=main).start()
