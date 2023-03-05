@@ -17,12 +17,20 @@ def compute_height(n, parents):
     return height(root)
 
 def main():
-    filename = input("Enter input filename: ").strip()
-    with open(filename, 'r') as f:
-        n = int(f.readline())
-        parents = list(map(int, f.readline().split()))
+    check = input()
+    if check == "F":
+        filename = input("Enter input filename: ").strip()
+        with open(filename, 'r') as f:
+            n = int(f.readline())
+            parents = list(map(int, f.readline().split()))
+            
+            print(compute_height(n, parents))
 
-    print(compute_height(n, parents))
+    else:
+        n = int(input())
+        parent = list(map(int, input().split()))
+        calc_height = compute_height(n, parent)
+        print(calc_height)
 
 if __name__ == '__main__':
     sys.setrecursionlimit(10**7)
