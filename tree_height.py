@@ -19,8 +19,8 @@ def compute_height(n, parents):
 def main():
     check = input()
     if "F" in check:
-        filename = input("Enter input filename: ").strip()
-        with open(filename, 'r') as f:
+        filename = input().strip()
+        with open('/workspaces/tree-height-from-empty-qewaru/test/' + filename) as f:
             n = int(f.readline())
             parents = list(map(int, f.readline().split()))
             print(compute_height(n, parents))
